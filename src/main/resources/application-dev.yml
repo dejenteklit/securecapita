@@ -1,0 +1,23 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  datasource:
+    url: jdbc:mysql://localhost:3306/securecapita?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: p3ac3insid3@2024
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
